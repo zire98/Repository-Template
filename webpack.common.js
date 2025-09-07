@@ -17,7 +17,9 @@ export default {
     ],
     module: {
         rules: [
-            { test: /\.css$/i, use: ["style-loader", "css-loader"] }
+            { test: /\.css$/i, use: ["style-loader", "css-loader"] },
+            { test: /\.(png|jpe?g|gif|svg|webp|avif)$/i, type: "asset/resource" },
+            { test: /\.(woff2?|eot|ttf|otf)$/i, type: "asset/resource" },
         ]
     }
 };
